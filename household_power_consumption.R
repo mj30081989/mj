@@ -1,8 +1,0 @@
-household_power_consumption <- read.csv("household_power_consumption.txt", sep=";")
-head(household_power_consumption)
-str(household_power_consumption)
-household_power_consumption$Date <- as.Date(household_power_consumption$Date)
-household_power_consumption$Time <- strptime(household_power_consumption$Time)
-str(household_power_consumption)
-household_power_consumption$Global_active_power <- as.numeric(household_power_consumption$Global_active_power)
-hist(household_power_consumption$Global_active_power, col = "orange", xlab = "Global Active Power (Kilowatts)", main = "Global Active Power")
